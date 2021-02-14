@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <form method="POST" action="/">
-        {%csrf_token%}
+        {% csrf_token %}
         {{form.title}}
-        <input type="submit" value="Submit"> 
+        <input type="submit" name="create_Task"> 
     </form>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> TO DO APP</title>
-    <h2> To DO </h2>
+    <h2> To Do App with Django </h2>
     {% for task in tasks %}
     <div> <p> {{task}} </p></div>
     {%endfor%}
